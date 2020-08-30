@@ -5,7 +5,7 @@
         <div class="container">
           <h1 class="title is-1 has-text-primary">Hi I'm Yanuar Aditia</h1>
           <vue-typed-js :strings="subtitle" class="has-text-centered is-block" :loop="true">
-            <h2 class="subtitle has-text-white"><span class="has-text-primary">return </span>"<span class="typing"></span>";</h2>
+            <h2 class="subtitle has-text-white"><span class="has-text-primary is-italic">return </span>"<span class="typing"></span>";</h2>
           </vue-typed-js>
         </div>
       </div>

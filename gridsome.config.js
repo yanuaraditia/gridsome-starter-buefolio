@@ -6,5 +6,6 @@
 
 module.exports = {
   siteName: 'Gridsome',
-  plugins: []
+  plugins: [],
+  testEnvironment: 'node'
 }

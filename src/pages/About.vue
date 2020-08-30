@@ -60,7 +60,7 @@ export default {
   },
   metaInfo: {
     title: 'Me',
-    description: "I'm "+this.calculateAge()+" old now, working as Backend Developer using Laravel as the framework."
+    description: "I'm currently working as Backend Developer using Laravel as the framework."
   },
   computed:{
     calculateAge() {

@@ -76,12 +76,14 @@ html, body {
         }
     }
     @media screen and (max-width: 1023px) {
-        &-item {
-            background: transparent;
+        &-item, &-menu {
+            background: transparent!important;
+            box-shadow: none;
         }
         right: 0;
         top: 0;
         left: 0;
+        padding: 10px;
         &-burger {
             span {
                 background: $primary;

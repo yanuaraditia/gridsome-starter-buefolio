@@ -25,7 +25,8 @@ export default {
     Hero,
   },
   metaInfo: {
-    title: 'Contact Me'
+    title: 'Contact Me',
+    description: 'Stay in touch with me, find me around the web',
   },
 }
 </script>

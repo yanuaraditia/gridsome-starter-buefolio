@@ -59,7 +59,8 @@ export default {
     Hero,
   },
   metaInfo: {
-    title: 'Me'
+    title: 'Me',
+    description: "I'm "+calculateAge+" old now, working as Backend Developer using Laravel as the framework."
   },
   computed:{
     calculateAge() {

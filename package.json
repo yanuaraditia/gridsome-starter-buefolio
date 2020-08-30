@@ -11,9 +11,14 @@
     "buefy": "^0.9.2",
     "bulma": "^0.9.0",
     "gridsome": "^0.7.0",
+    "gridsome-plugin-pwa": "^0.0.18",
     "node-sass": "^4.14.1",
     "sass-loader": "^10.0.1",
     "vue-glitch": "^1.0.1",
     "vue-typed-js": "^0.1.2"
+  },
+  "devDependencies": {
+    "gridsome-plugin-manifest": "^0.3.5",
+    "gridsome-plugin-service-worker": "^0.2.6"
   }
 }

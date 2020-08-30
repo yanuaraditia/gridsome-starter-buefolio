@@ -1,0 +1,93 @@
+// Import Bulma's core
+@import "~bulma/sass/utilities/_all";
+
+// Set your colors
+$primary: #efabc0;
+$primary-invert: findColorInvert($primary);
+$twitter: #4099FF;
+$twitter-invert: findColorInvert($twitter);
+$background: #111;
+
+// Setup $colors to use as bulma classes (e.g. 'is-twitter')
+$colors: (
+    "white": ($white, $black),
+    "black": ($black, $white),
+    "light": ($light, $light-invert),
+    "dark": ($dark, $dark-invert),
+    "primary": ($primary, $primary-invert),
+    "info": ($info, $info-invert),
+    "success": ($success, $success-invert),
+    "warning": ($warning, $warning-invert),
+    "danger": ($danger, $danger-invert),
+    "twitter": ($twitter, $twitter-invert)
+);
+
+// Links
+$link: $primary;
+$link-invert: $primary-invert;
+$link-focus-border: $primary;
+
+// Import Bulma and Buefy styles
+@import "~bulma";
+@import "~buefy/src/scss/buefy";
+
+html, body {
+    background: $background;
+    color: #fff;
+    font-family: 'Fira Code', sans-serif;
+}
+::-webkit-scrollbar {
+    width: 0;
+    height: 5px;
+    &-track {
+        background: $primary;
+    }
+    &-thumb {
+        background: $background;
+    }
+}
+.wrapper {
+    height: 100vh;
+    position: relative;
+}
+.navbar {
+    position: fixed;
+    background: rgba($color: $background, $alpha: .86);
+    @media screen and (min-width: 1024px) {
+        padding: 10px;
+        right: 5px;
+        top: 5px;
+        left: 5px;
+        .router-link-exact-active {
+            background-color: transparent!important;
+            box-shadow: 0 0 0 2px inset $primary;
+        }
+        &-item {
+            padding-left: 15px;
+            padding-right: 15px;
+            &:not(:last-child) {
+                margin-right: 5px;
+            }
+            &:hover {
+                background-color: transparent!important;
+                box-shadow: 0 0 0 2px inset $primary;
+            }
+        }
+    }
+    @media screen and (max-width: 1023px) {
+        right: 0;
+        top: 0;
+        left: 0;
+    }
+}
+.liner {
+    @media screen and (min-width: 1024px) {
+        border: 5px solid $primary;
+        position: fixed;
+        bottom: 0;
+        right: 0;
+        top: 0;
+        left: 0;
+        pointer-events: none;
+    }
+}

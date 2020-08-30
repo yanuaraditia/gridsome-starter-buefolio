@@ -6,6 +6,7 @@
 
 module.exports = {
   siteName: 'Yanuar Aditia',
+  siteUrl: 'https://yanuaraditia.com',
   plugins: [
     {
       use: "gridsome-plugin-manifest",

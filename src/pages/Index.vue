@@ -1,12 +1,13 @@
 <template>
   <Layout>
-    <section class="hero is-fullheight has-text-centered">
+    <section class="hero is-fullheight">
       <div class="hero-body">
         <div class="container">
-          <h1 class="title is-1 has-text-primary">Hi I'm Yanuar Aditia</h1>
-          <vue-typed-js :strings="subtitle" class="has-text-centered is-block" :loop="true">
-            <h2 class="subtitle has-text-white"><span class="has-text-primary is-italic">return </span>"<span class="typing"></span>";</h2>
-          </vue-typed-js>
+          <div class="focus-breathe-relax">
+            <span>Focus /</span><br>
+            <span>Breathe /</span><br>
+            <span>Relax /</span>
+          </div>
         </div>
       </div>
     </section>

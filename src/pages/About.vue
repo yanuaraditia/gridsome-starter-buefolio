@@ -6,7 +6,7 @@
         <h3 class="title is-5 has-text-primary">About Information</h3>
         <div class="columns">
           <div class="column is-2">
-            <g-image src="~/images/pp.jpg"></g-image>
+            <g-image src="~/images/pp.jpg" style="border-radius: 100%"></g-image>
           </div>
           <div class="column is-10">
             <p>Hello! I’m Yanuar Aditia. Software Engineer from Indonesia, Yogyakarta, Sleman. I have rich experience in web development and also UI / UX Development.</p>

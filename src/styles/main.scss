@@ -2,7 +2,7 @@
 @import "~bulma/sass/utilities/_all";
 
 // Set your colors
-$primary: #efabc0;
+$primary: #ff5050;
 $primary-invert: findColorInvert($primary);
 $twitter: #4099FF;
 $twitter-invert: findColorInvert($twitter);
@@ -34,7 +34,7 @@ $link-focus-border: $primary;
 html, body {
     background: $background;
     color: #fff;
-    font-family: 'Fira Code', sans-serif;
+    font-family: 'Inter', sans-serif;
 }
 ::-webkit-scrollbar {
     width: 0;
@@ -55,23 +55,28 @@ html, body {
     background: rgba($color: $background, $alpha: .86);
     backdrop-filter: blur(10px) saturate(75%);
     @media screen and (min-width: 1024px) {
+        min-height: auto;
         padding: 10px;
         right: 5px;
         top: 5px;
         left: 5px;
+        &-end {
+            background: rgba($color: $white, $alpha: .1);
+            border-radius: 1000px;
+            overflow: hidden;
+        }
         .router-link-exact-active {
-            background-color: transparent!important;
-            box-shadow: 0 0 0 2px inset $primary;
+            color: $black!important;
+            background-color: $primary!important;
         }
         &-item {
-            padding-left: 15px;
-            padding-right: 15px;
-            &:not(:last-child) {
-                margin-right: 5px;
-            }
+            padding: 10px 25px;
+            border-radius: 1000px;
+            color: rgba($color: $white, $alpha: .5);
+            transition: all .2s ease-in-out;
             &:hover {
+                color: $primary!important;
                 background-color: transparent!important;
-                box-shadow: 0 0 0 2px inset $primary;
             }
         }
     }
@@ -79,6 +84,10 @@ html, body {
         &-item, &-menu {
             background: transparent!important;
             box-shadow: none;
+            color: rgba($color: $white, $alpha: .5);
+        }
+        .router-link-exact-active {
+            color: $primary!important;
         }
         right: 0;
         top: 0;
@@ -86,19 +95,72 @@ html, body {
         padding: 10px;
         &-burger {
             span {
+                width: 20px;
+                left: calc(50% - 10px);
                 background: $primary;
+                height: 2px;
+                &:nth-child(1) {
+                    top: calc(50% - 8px);
+                }
+                &:nth-child(2) {
+                    top: calc(50% - 1px);
+                }
+                &:nth-child(3) {
+                    top: calc(50% + 6px);
+                }
+            }
+            &.is-active {
+                span {
+                    &:nth-child(3) {
+                        top: calc(50% - 4px);
+                    }
+                    &:nth-child(3) {
+                        top: calc(50% + 2px);
+                    }
+                }
             }
         }
     }
 }
 .liner {
     @media screen and (min-width: 1024px) {
-        border: 5px solid $primary;
+        border: 5px solid $black;
         position: fixed;
         bottom: 0;
         right: 0;
         top: 0;
         left: 0;
         pointer-events: none;
+    }
+}
+
+.focus-breathe-relax {
+    @media screen and (min-width: 1024px) {
+        font-size: 62px;
+    }
+    @media screen and (max-width: 1023px) {
+        font-size: 42px;
+    }
+    color: $primary;
+    font-weight: 600;
+}
+
+.progress.is-primary {
+    &::-webkit-progress-value {
+        background: $primary;
+        border-radius: 2px; 
+        background-size: 35px 20px, 100% 100%, 100% 100%;
+    }
+}
+.title {
+    &.is-1 {
+        @media screen and (max-width: 1023px) {
+            font-size: 28px;
+        }
+    }
+}
+.pb-0-mobile {
+    @media screen and (max-width: 1023px) {
+        padding-bottom: 0;
     }
 }

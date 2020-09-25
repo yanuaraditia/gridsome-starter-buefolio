@@ -61,7 +61,7 @@ export default {
 .currently-listening {
   background: rgba($color: #fff, $alpha: .015);
   padding: 0;
-  border-radius: 20px;
+  border-radius: 10px;
   position: relative;
   overflow: hidden;
   height: 100px;

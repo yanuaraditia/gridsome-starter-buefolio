@@ -57,7 +57,7 @@ export default {
       window.location.href = url
     }
   },
-  mounted() {
+  created() {
     this.loadSpotify()
   }
 }

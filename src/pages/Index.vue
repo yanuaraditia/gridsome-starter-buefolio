@@ -65,7 +65,8 @@ export default {
 
 <style lang="scss">
 .currently-listening {
-  background: rgba($color: #fff, $alpha: .02);
+  margin-top: 1rem;
+  background: rgba($color: #fff, $alpha: .025);
   padding: 0;
   border-radius: 10px;
   position: relative;
@@ -95,7 +96,7 @@ export default {
       display: none;
     }
     .rroah {
-      padding: 1.5rem;
+      padding: .75rem;
     }
   }
 }

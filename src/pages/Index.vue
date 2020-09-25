@@ -48,6 +48,9 @@ export default {
       axios.get('https://p.yanuaraditia.com/hoyya.php')
       .then(res => {
         this.listening  = res.data
+        setInterval(() => {
+          this.loadSpotify()
+        },210000)
       })
     },
     redirect(url) {

@@ -62,7 +62,7 @@ export default {
 
 <style lang="scss">
 .currently-listening {
-  background: rgba($color: #fff, $alpha: .01);
+  background: rgba($color: #fff, $alpha: .02);
   padding: 0;
   border-radius: 10px;
   position: relative;

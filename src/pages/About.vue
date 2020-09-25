@@ -3,13 +3,17 @@
     <Hero title="Something About Me" branch="about"/>
     <section class="section mb-10">
       <div class="container">
-        <h3 class="title is-5 has-text-primary">About Information</h3>
+        <h3 class="title is-5 has-text-primary">Hello I'm Yanuar Aditia</h3>
         <div class="columns">
-          <div class="column is-2">
+          <div class="column is-3">
             <g-image src="~/images/pp.jpg" style="border-radius: 100%"></g-image>
           </div>
-          <div class="column is-10">
-            <p>Hello! I’m Yanuar Aditia. Software Engineer from Indonesia, Yogyakarta, Sleman. I have rich experience in web development and also UI / UX Development.</p>
+          <div class="column is-9">
+            <p>My full name is Yanuar Aditia, and Yanuar in short. Born, raised, and currently living in Yogyakarta, Indonesia.
+              Currently working as Backend Developer at Tries Company Yogyakarta.</p>
+            <p>I start getting into web dev on high school by creating an blog/CMS for practicum management using native PHP, then learning various php framework like CI, CakePHP, Yii, but now I'd prefer using Laravel.</p>
+            <p>Nowadays I spend my time to organize IMAKA site, sometimes hang around various programming/web dev user groups, play some games, and keep learning new things while I can.</p>
+            <p>You can contact me via email at yanuaraditia@outlook.com.</p>
             <div class="columns is-multiline mt-3">
               <div class="column is-6 is-4-widescreen"><strong class="has-text-primary">Age :</strong> {{calculateAge}}</div>
               <div class="column is-6 is-4-widescreen"><strong class="has-text-primary">Residence :</strong> Indonesia</div>

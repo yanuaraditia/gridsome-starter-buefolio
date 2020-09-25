@@ -8,12 +8,12 @@
             <span>Breathe /</span><br>
             <span>Relax /</span>
           </div>
-          <div class="currently-listening" v-if="listening != null">
+          <div class="currently-listening" @click="redirect(listening.item.external_urls.spotify)" v-if="listening != null" :style="`--bg:${listening.item.album.images[1].url}`">
             <img :src="listening.item.album.images[1].url" alt="" class="card-img-top">
             <div class="rroah">
-              <h5 class="title is-6 has-text-white">{{listening != null ? '🎶' + listening.item.name : null}}</h5>
-              <h6 class="subtitle is-6">
-                <span v-for="artist in listening.item.album.artists" :key="artist.id">{{artist.name}}</span>
+              <h5 class="listening">{{listening != null ? '🎶' + listening.item.name : null}}</h5>
+              <h6 class="artists">
+                <span v-for="artist in listening.item.album.artists" :key="artist.id">{{artist.name}} </span>
               </h6>
             </div>
           </div>
@@ -49,6 +49,9 @@ export default {
       .then(res => {
         this.listening  = res.data
       })
+    },
+    redirect(url) {
+      window.location.href = url
     }
   },
   mounted() {
@@ -59,24 +62,38 @@ export default {
 
 <style lang="scss">
 .currently-listening {
-  background: rgba($color: #fff, $alpha: .015);
+  background: rgba($color: #fff, $alpha: .01);
   padding: 0;
   border-radius: 10px;
   position: relative;
   overflow: hidden;
-  height: 100px;
+  .artists {
+    color: #555;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
   @media screen and (min-width: 1240px) {
-    max-width: 500px;
-  }
-  img {
-    width: 100px;
     height: 100px;
+    max-width: 500px;
+    img {
+      width: 100px;
+      height: 100px;
+      
+    }
+    .rroah {
+      position: absolute;
+      left: 130px;
+      top: 1.5rem;
+      right: 1.5rem;
+    }
   }
-  .rroah {
-    position: absolute;
-    left: 130px;
-    top: 1.5rem;
-    right: 1.5rem;
+  @media screen and (max-width: 1239px) {
+    img {
+      display: none;
+    }
+    .rroah {
+      padding: 1.5rem;
+    }
   }
 }
 </style>
